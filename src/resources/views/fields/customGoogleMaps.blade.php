@@ -52,11 +52,11 @@
 
                     const input = locationInputs[i];
                     const fieldKey = input.id.replace("-input", "");
-                    console.log(document.getElementById(fieldKey + "-latitude-hidden").value);
-                    const isEdit = document.getElementById(fieldKey + "-latitude-hidden").value != '' && document.getElementById(fieldKey + "-longitude-hidden").value != '';
+                    console.log(document.getElementById(fieldKey + "-latitude").value);
+                    const isEdit = document.getElementById(fieldKey + "-latitude").value != '' && document.getElementById(fieldKey + "-longitude").value != '';
 
-                    const latitude = parseFloat(document.getElementById(fieldKey + "-latitude-hidden").value) || -33.8688;
-                    const longitude = parseFloat(document.getElementById(fieldKey + "-longitude-hidden").value) || 151.2195;
+                    const latitude = parseFloat(document.getElementById(fieldKey + "-latitude").value) || -33.8688;
+                    const longitude = parseFloat(document.getElementById(fieldKey + "-longitude").value) || 151.2195;
 
                     const map = new google.maps.Map(document.getElementById(fieldKey + '-map'), {
                         center: {lat: latitude, lng: longitude},
